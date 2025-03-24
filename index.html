@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+            </div>
+            <img src="https://raw.githubusercontent.com/dtsoden/webresources/main/CNX/CNX_Reverse_RGB.png" alt="Logo" class="header-logo">
+            <h1>API Demo</h1>
+        </div>
+        <p class="tagline">Seamless API Integration</p>
+    </header>
+
+    <main>
+        <div class="master-container">
+            <nav class="side-nav">
+                <button class="nav-btn active" data-action="showCustomers">
+                    <i class="fas fa-users"></i>
+                    Show All Customers
+                </button>
+                <button class="nav-btn" data-action="addCustomer">
+                    <i class="fas fa-user-plus"></i>
+                    Add Customer
+                </button>
+            </nav>
+            
+            <div class="content-area">
+                <div id="customers-grid" class="active">
+                    <h2>Customer List</h2>
+                    <div class="grid-container"></div>
+                </div>
+                
+                <div id="add-customer-form">
+                    <h2>Add New Customer</h2>
+                    <form id="customerForm">
+                        <input type="hidden" id="customerId" required>
+                        <input type="text" id="customerName" placeholder="Name" required>
+                        <input type="email" id="customerEmail" placeholder="E-Mail" required>
+                        <input type="tel" id="customerPhone" placeholder="Phone Number" required>
+                        <button type="submit" class="submit-btn">Add Customer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> API Demo. All rights reserved.</p>
+        <p>Current Date: <span id="current-date"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
